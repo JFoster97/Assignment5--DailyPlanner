@@ -1,21 +1,7 @@
-// Create initial variables needed to generate schedule and time with moment
-var date = $("#date");
-var today = moment();
+var Notes = [""]
 
-var scheduleBlock = $('.schedule-block');
-var body = $('body');
+var currentDay = $("#currentDay").text(moment().format('ddd, MMMM D, YYYY'));
 
-// Format date display
-date.text(today.format('dddd, MMMM Do'));
+var time = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
-for (var i = 9; i <= 17; i++) {
-    // create timeblock div
-    var timeblockEl = $('<div>');
-    timeblockEl.attr('class', 'time-block-'+i+' row');
-
-
-
-    var hourEl = $('<div>');
-    hourEl.attr('class', 'hour col-1');
-    hourEl.text(i);
-    timeblockEl.append(hourEl);
+var currentTime = parseInt(moment().format('H'));
