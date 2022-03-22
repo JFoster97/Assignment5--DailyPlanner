@@ -32,10 +32,11 @@ function formatTimes() {
 }
 
 function showStorage() {
+    notes = JSON.parse(localStorage.getItem("notes"));
     for (i = 0; i < hourBlocks.length; i++) {
         ($(hourBlocks[i])).val(notes[i])
     }
 }
 
-formatTimes();
 showStorage();
+formatTimes();
